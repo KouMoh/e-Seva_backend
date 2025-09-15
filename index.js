@@ -64,6 +64,7 @@ app.get('/', (req, res) => res.send({ ok: true, message: 'E-Suvidha Backend' }))
 app.use('/api/tenders', require('./routes/tenderRoutes'));
 app.use('/api/bids', require('./routes/bidRoutes'));
 app.use('/api/notifications', require('./routes/notificationRoutes'));
+app.use('/api/users', require('./routes/userRoutes'));
 
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
